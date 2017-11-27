@@ -34,7 +34,8 @@ You keep the built/compiled/transpiled/release code in the `dist` directory, sou
                 "target": "src/test/**/*",
                 "from": [
                   "src/lib",
-                  "src/lib/**/*"
+                  "src/lib/**/*",
+                  "!src/lib/module-1"
                 ]
               }
             ]
