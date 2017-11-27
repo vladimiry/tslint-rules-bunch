@@ -3,19 +3,21 @@
     "./tslint.json"
   ],
   "rulesDirectory": [
-    "./dist/rules"
+    "node_modules/tslint-rules-bunch/rules"
   ],
   "rules": {
     "no-import-zones": [
       true,
       {
-        "basePath": "src",
         "zones": [
           {
             "patterns": [
               {
-                "target": "test/**/*",
-                "forbidden": "lib/**/*"
+                "target": "src/test/**/*",
+                "from": [
+                  "src/lib",
+                  "src/lib/**/*"
+                ]
               }
             ]
           }
