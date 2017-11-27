@@ -19,21 +19,22 @@ Imagine you have the following directory structure:
 ```
 You keep the built/compiled/transpiled/release code in the `dist` directory, source code in `src/lib` and tests code in `src/test`. For example you want to make sure that code under `src/test` directory doesn't import anything from the `src/lib` as you want tests code does import only from the `dist` (release code). But as an exclusion you want to allow tests code import stuff from the `src/lib/module-1`. You can enforce such scenario putting the `no-import-zones` rule into your `tslint.json`:
 ```json
+{
+  "rulesDirectory": [
+    "node_modules/tslint-rules-bunch/rules"
+  ],
   "rules": {
     "no-import-zones": [
       true,
       {
-        "basePath": "src",
-        "verbose": true,
         "zones": [
           {
             "patterns": [
               {
-                "target": "test/**/*",
+                "target": "src/test/**/*",
                 "from": [
-                  "lib",
-                  "lib/**/*",
-                  "!lib/module-1"
+                  "src/lib",
+                  "src/lib/**/*"
                 ]
               }
             ]
@@ -42,6 +43,8 @@ You keep the built/compiled/transpiled/release code in the `dist` directory, sou
       }
     ]
   }
+}
+
 ```
 Above code related notes:
 - `basePath`: defines the base path value that is used for resolving `<pattern object>.target` and `<pattern object>.from` values relative to the `process.cwd()`. It can be set on the top level and also on the specific zone level. The property is optional, by default `process.cwd()` is used as the base path value.
