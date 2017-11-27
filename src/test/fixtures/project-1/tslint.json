@@ -1,0 +1,25 @@
+{
+  "rules": {
+    "no-import-zones": [
+      true,
+      {
+        "basePath": "src",
+        "verbose": true,
+        "zones": [
+          {
+            "patterns": [
+              {
+                "target": "test/**/*",
+                "from": [
+                  "lib",
+                  "lib/**/*",
+                  "!lib/module-1"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
