@@ -1,6 +1,6 @@
 {
   "name": "tslint-rules-bunch",
-  "version": "0.0.1-alpha.3",
+  "version": "0.0.1",
   "description": "Collection of the `tslint` rules",
   "author": "Vladimir Yakovlev <dev.vladimir.y@gmail.com> (https://github.com/vladimiry)",
   "license": "MIT",
@@ -28,8 +28,8 @@
     "lint"
   ],
   "ava": {
-    "TODO 1": "get rid of ava-ts, run tests using ts-node as soon as ava gets *.ts file pattern allowed",
-    "TODO 2": "ts-node/register is added as ava-ts doesn't work well with just tsconfig-paths/register added without explicit ts-node/register attaching",
+    "TODO ava 1": "get rid of ava-ts, run tests using ts-node as soon as ava gets *.ts file pattern allowed",
+    "TODO ava 2": "ts-node/register is added as ava-ts doesn't work well with just tsconfig-paths/register added without explicit ts-node/register attaching",
     "require": [
       "ts-node/register",
       "tsconfig-paths/register"
