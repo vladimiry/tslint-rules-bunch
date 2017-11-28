@@ -119,7 +119,7 @@ function walk(ctx: Lint.WalkContext<Options[]>) {
                     if (mm(relativeSrcFile, target).length && mm(relativeImportFile, from).length) {
                         const zone: OptionsZoneError = {basePath, target, from};
                         const messages = [
-                            `(${Rule.metadata.ruleName}): "${importUnit.text}" import is from`,
+                            `(${Rule.metadata.ruleName}): "${importUnit.text}" import is forbidden`,
                         ];
 
                         if (verbose) {

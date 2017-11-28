@@ -24,14 +24,14 @@ test("test", async (t) => {
         .filter((line) => !!line);
     const expectedErrorLines = [
         // tslint:disable:max-line-length
-        `ERROR: src/test/test-1.ts[1, 10]: (no-import-zones): "../../../project-1/src/lib" import is from; rule: {"basePath":"src","target":"test/**/*","from":["lib","lib/**/*","!lib/module-1"]}; resolved values: {"file":"test/test-1.ts","import":"lib"}`,
-        `ERROR: src/test/test-1.ts[2, 10]: (no-import-zones): "../../src/lib" import is from; rule: {"basePath":"src","target":"test/**/*","from":["lib","lib/**/*","!lib/module-1"]}; resolved values: {"file":"test/test-1.ts","import":"lib"}`,
-        `ERROR: src/test/test-1.ts[4, 10]: (no-import-zones): "../lib" import is from; rule: {"basePath":"src","target":"test/**/*","from":["lib","lib/**/*","!lib/module-1"]}; resolved values: {"file":"test/test-1.ts","import":"lib"}`,
-        `ERROR: src/test/test-1.ts[5, 10]: (no-import-zones): "src/lib" import is from; rule: {"basePath":"src","target":"test/**/*","from":["lib","lib/**/*","!lib/module-1"]}; resolved values: {"file":"test/test-1.ts","import":"lib"}`,
-        `ERROR: src/test/test-1.ts[7, 10]: (no-import-zones): "../lib/index" import is from; rule: {"basePath":"src","target":"test/**/*","from":["lib","lib/**/*","!lib/module-1"]}; resolved values: {"file":"test/test-1.ts","import":"lib/index"}`,
-        `ERROR: src/test/test-1.ts[8, 10]: (no-import-zones): "src/lib/index" import is from; rule: {"basePath":"src","target":"test/**/*","from":["lib","lib/**/*","!lib/module-1"]}; resolved values: {"file":"test/test-1.ts","import":"lib/index"}`,
-        `ERROR: src/test/test-1.ts[13, 10]: (no-import-zones): "../lib/module-3/lib-1/lib-2" import is from; rule: {"basePath":"src","target":"test/**/*","from":["lib","lib/**/*","!lib/module-1"]}; resolved values: {"file":"test/test-1.ts","import":"lib/module-3/lib-1/lib-2"}`,
-        `ERROR: src/test/test-1.ts[14, 10]: (no-import-zones): "src/lib/module-3/lib-1/lib-2" import is from; rule: {"basePath":"src","target":"test/**/*","from":["lib","lib/**/*","!lib/module-1"]}; resolved values: {"file":"test/test-1.ts","import":"lib/module-3/lib-1/lib-2"}`,
+        `ERROR: src/test/test-1.ts[1, 10]: (no-import-zones): "../../../project-1/src/lib" import is forbidden; rule: {"basePath":"src","target":"test/**/*","from":["lib","lib/**/*","!lib/module-1"]}; resolved values: {"file":"test/test-1.ts","import":"lib"}`,
+        `ERROR: src/test/test-1.ts[2, 10]: (no-import-zones): "../../src/lib" import is forbidden; rule: {"basePath":"src","target":"test/**/*","from":["lib","lib/**/*","!lib/module-1"]}; resolved values: {"file":"test/test-1.ts","import":"lib"}`,
+        `ERROR: src/test/test-1.ts[4, 10]: (no-import-zones): "../lib" import is forbidden; rule: {"basePath":"src","target":"test/**/*","from":["lib","lib/**/*","!lib/module-1"]}; resolved values: {"file":"test/test-1.ts","import":"lib"}`,
+        `ERROR: src/test/test-1.ts[5, 10]: (no-import-zones): "src/lib" import is forbidden; rule: {"basePath":"src","target":"test/**/*","from":["lib","lib/**/*","!lib/module-1"]}; resolved values: {"file":"test/test-1.ts","import":"lib"}`,
+        `ERROR: src/test/test-1.ts[7, 10]: (no-import-zones): "../lib/index" import is forbidden; rule: {"basePath":"src","target":"test/**/*","from":["lib","lib/**/*","!lib/module-1"]}; resolved values: {"file":"test/test-1.ts","import":"lib/index"}`,
+        `ERROR: src/test/test-1.ts[8, 10]: (no-import-zones): "src/lib/index" import is forbidden; rule: {"basePath":"src","target":"test/**/*","from":["lib","lib/**/*","!lib/module-1"]}; resolved values: {"file":"test/test-1.ts","import":"lib/index"}`,
+        `ERROR: src/test/test-1.ts[13, 10]: (no-import-zones): "../lib/module-3/lib-1/lib-2" import is forbidden; rule: {"basePath":"src","target":"test/**/*","from":["lib","lib/**/*","!lib/module-1"]}; resolved values: {"file":"test/test-1.ts","import":"lib/module-3/lib-1/lib-2"}`,
+        `ERROR: src/test/test-1.ts[14, 10]: (no-import-zones): "src/lib/module-3/lib-1/lib-2" import is forbidden; rule: {"basePath":"src","target":"test/**/*","from":["lib","lib/**/*","!lib/module-1"]}; resolved values: {"file":"test/test-1.ts","import":"lib/module-3/lib-1/lib-2"}`,
         // tslint:enable:max-line-length
     ];
 
