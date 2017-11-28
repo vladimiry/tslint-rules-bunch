@@ -47,6 +47,31 @@ You keep the built/compiled/transpiled/release code in the `dist` directory, sou
 }
 
 ```
+With the `basePath` value set to `src`, `no-import-zones` block would look like this (pattern values don't start from the `src` anymore):
+```json
+    "no-import-zones": [
+      true,
+      {
+        "basePath": "src",
+        "verbose": true,
+        "zones": [
+          {
+            "patterns": [
+              {
+                "target": "test/**/*",
+                "from": [
+                  "lib",
+                  "lib/**/*",
+                  "!lib/module-1"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+```
+
 Above code related notes:
 - `basePath`: defines the base path value that is used for resolving `<pattern object>.target` and `<pattern object>.from` values relative to the `process.cwd()`. It can be set on the top level and also on the specific zone level. The property is optional, by default `process.cwd()` is used as the base path value.
 - `verbose`: flag value that toggles detailed failure output, default value is `undefined`, means `false`;
