@@ -1,6 +1,6 @@
 {
   "name": "tslint-rules-bunch",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Collection of the `tslint` rules",
   "author": "Vladimir Yakovlev <dev.vladimir.y@gmail.com> (https://github.com/vladimiry)",
   "license": "MIT",
@@ -50,7 +50,7 @@
     "ts-node": "^3.3.0",
     "tsconfig-paths": "^2.4.0",
     "tslint": "^5.8.0",
-    "tslint-rules-bunch": "^0.0.1-alpha.2",
+    "tslint-rules-bunch": "^0.0.2",
     "typescript": "~2.6.2"
   },
   "dependencies": {
