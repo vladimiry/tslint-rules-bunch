@@ -1,6 +1,6 @@
 {
   "name": "tslint-rules-bunch",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Collection of the `tslint` rules",
   "author": "Vladimir Yakovlev <dev.vladimir.y@gmail.com> (https://github.com/vladimiry)",
   "license": "MIT",
