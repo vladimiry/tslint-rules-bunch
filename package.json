@@ -37,7 +37,6 @@
   },
   "devDependencies": {
     "@types/micromatch": "^2.3.29",
-    "@types/minimatch": "^3.0.1",
     "@types/node": "^8.0.53",
     "ava": "^0.24.0",
     "ava-ts": "^0.23.0",
@@ -54,6 +53,7 @@
     "typescript": "~2.6.2"
   },
   "dependencies": {
-    "micromatch": "^3.x"
+    "micromatch": "^3.1.4",
+    "tslib": "~1.8.0"
   }
 }

@@ -3,6 +3,7 @@
   // since TypeScript doesn't do merge, it does overriding https://github.com/Microsoft/TypeScript/pull/14178
   "compilerOptions": {
     "strict": true,
+    "importHelpers": true,
     "lib": [
       "es2015"
     ],
