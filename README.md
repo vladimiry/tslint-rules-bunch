@@ -2,6 +2,8 @@
 
 is a module that contains a set of the [tslint](https://github.com/palantir/tslint) rules.
 
+[![Build Status: Linux / MacOS](https://travis-ci.org/vladimiry/tslint-rules-bunch.svg?branch=master)](https://travis-ci.org/vladimiry/tslint-rules-bunch)
+
 ## Rules
 
 ### `no-import-zones`
