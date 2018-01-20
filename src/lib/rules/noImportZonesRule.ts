@@ -116,7 +116,7 @@ function walk(ctx: Lint.WalkContext<Options[]>) {
                 const relativeImportFile = path.relative(basePath, importFile);
 
                 for (const {target, from} of patterns) {
-                    if (mm(relativeSrcFile, target).length && mm(relativeImportFile, from).length) {
+                    if (mm([relativeSrcFile], target).length && mm([relativeImportFile], from).length) {
                         const zone: OptionsZoneError = {basePath, target, from};
                         const messages = [
                             `(${Rule.metadata.ruleName}): "${importUnit.text}" import is forbidden`,
