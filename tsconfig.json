@@ -13,14 +13,11 @@
     "lib": [
       "es2015"
     ],
-    "baseUrl": "./src/lib",
-    "outDir": "./compile",
+    "baseUrl": ".",
+    "outDir": "./dist",
     "typeRoots": [
       "./node_modules/@types",
       "./src/@types"
     ]
-  },
-  "include": [
-    "./src/lib/index.ts"
-  ]
+  }
 }

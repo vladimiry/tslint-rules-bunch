@@ -1,6 +1,6 @@
 {
   "name": "tslint-rules-bunch",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Collection of the `tslint` rules",
   "author": "Vladimir Yakovlev <dev.vladimir.y@gmail.com> (https://github.com/vladimiry)",
   "license": "MIT",
@@ -12,49 +12,46 @@
   ],
   "main": "./index.js",
   "scripts": {
-    "compile": "tsc",
-    "compile:watch": "tsc -w",
-    "dist:compile": "tsc --outDir ./dist",
-    "dist:compile:watch": "tsc --outDir ./dist -w",
+    "lib:compile": "tsc --listEmittedFiles -p ./src/lib/tsconfig.json",
+    "lib:compile:watch": "tsc -w -p ./src/lib/tsconfig.json",
+    "dist": "npm-run-all dist:clean lint lib:compile dist:copy test",
     "dist:clean": "rimraf ./dist",
     "dist:copy": "cpx \"{package.json,package-lock.json,README.md,LICENSE}\" ./dist",
-    "dist": "npm-run-all dist:clean dist:compile lint dist:copy test",
-    "lint:src": "tslint -c ./tslint.json \"./src/{lib,@types}/**/*.ts\"",
-    "lint:test": "tslint -c ./tslint-test.json -e \"./src/test/fixtures/**/*.*\" \"./src/test/**/*.ts\"",
+    "lint:src": "tslint -p ./src/lib/tsconfig.json -c ./tslint.json \"./src/**/*.ts\"",
+    "lint:test": "tslint -p ./test/tsconfig.json -c ./test/tslint.json \"./test/**/*.ts\"",
     "lint": "npm-run-all lint:src lint:test",
-    "test": "cross-env TS_NODE_PROJECT=./tsconfig-test.json ava-ts --verbose \"./src/test/**/*.spec.ts\""
+    "test": "cross-env TS_NODE_PROJECT=./test/tsconfig.json ava --verbose \"./test/**/*.{spec,test}.ts\""
   },
   "pre-commit": [
     "lint"
   ],
   "ava": {
-    "TODO ava 1": "get rid of ava-ts, run tests using ts-node as soon as ava gets *.ts file pattern allowed",
-    "TODO ava 2": "ts-node/register is added as ava-ts doesn't work well with just tsconfig-paths/register added without explicit ts-node/register attaching",
+    "compileEnhancements": false,
+    "extensions": [
+      "ts"
+    ],
     "require": [
-      "ts-node/register",
-      "tsconfig-paths/register"
+      "ts-node/register"
     ]
   },
   "devDependencies": {
     "@types/micromatch": "^3.1.0",
-    "@types/node": "^9.3.0",
-    "ava": "^0.24.0",
-    "ava-ts": "^0.24.0",
+    "@types/node": "^10.5.6",
+    "ava": "^1.0.0-beta.6",
     "buffered-spawn": "^3.3.2",
     "cpx": "^1.5.0",
     "cross-env": "^5.1.3",
     "npm-run-all": "^4.1.2",
     "pre-commit": "^1.2.2",
     "rimraf": "^2.6.2",
-    "ts-node": "^4.1.0",
-    "tsconfig-paths": "^3.1.1",
+    "ts-node": "^7.0.0",
     "tslint": "^5.9.1",
-    "tslint-rules-bunch": "^0.0.3",
-    "typescript": "~2.6.2"
+    "tslint-rules-bunch": "^0.0.4",
+    "typescript": "^3.0.1"
   },
   "dependencies": {
     "micromatch": "^3.1.5",
     "tslib": "^1.9.0",
-    "tsutils": "^2.19.1"
+    "tsutils": "^3.0.0"
   }
 }
