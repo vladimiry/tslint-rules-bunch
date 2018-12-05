@@ -1,6 +1,6 @@
-import * as path from "path";
-import {test} from "ava";
 import * as bufferedSpawn from "buffered-spawn";
+import * as path from "path";
+import test from "ava";
 
 const projectRootDirectory = path.resolve(process.cwd());
 const tslintCli = path.resolve(projectRootDirectory, "./node_modules/.bin/tslint");
@@ -19,7 +19,8 @@ test("test", async (t) => {
         scanPattern,
     ];
 
-    const {stdout}: { stdout: string } = await t.throws(bufferedSpawn(`node`, tslintArgs, {cwd: basePath}));
+    const {stdout}: { stdout: string }
+        = (await t.throwsAsync(bufferedSpawn(`node`, tslintArgs, {cwd: basePath}))) as Error & { stdout: string };
     const errorLines = (stdout)
         .split("\n")
         .filter((line) => !!line);
