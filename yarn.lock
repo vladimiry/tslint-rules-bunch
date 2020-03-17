@@ -2187,10 +2187,10 @@ tslib@^1.10.0, tslib@^1.11.1, tslib@^1.8.1:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.11.1.tgz#eb15d128827fbee2841549e171f45ed338ac7e35"
   integrity sha512-aZW88SY8kQbU7gpV19lN24LtXh/yD4ZZg6qieAJDDg+YBsJcSmLGK9QpnUjAKVG/xefmvJGd1WUmfpT/g6AJGA==
 
-tslint-rules-bunch@^0.0.10:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/tslint-rules-bunch/-/tslint-rules-bunch-0.0.10.tgz#31330fb72e8cad2174315d85cca7727b9f10aac5"
-  integrity sha512-DnC05dR0itezaEhj5YN7G0JbQpjTp0K4wWiM8KsWlMdOUS2mueoGDWMcuGtm2OgmtWNVPauWvA81ar8HW8cH9Q==
+tslint-rules-bunch@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/tslint-rules-bunch/-/tslint-rules-bunch-1.0.0.tgz#9268ce8019a6ddea9338e8e3e5c7d7a8196dd421"
+  integrity sha512-Nop3WpvamS8FM8VMop092TVs8ibK5Y/B/kWKdmNDll/O1+gAC+ePqLKe6Sh6I/Ot8Lwe8RD0AfyNYbNydCen3Q==
   dependencies:
     micromatch "^4.0.2"
     tslib "^1.11.1"
