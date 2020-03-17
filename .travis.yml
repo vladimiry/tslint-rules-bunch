@@ -12,6 +12,6 @@ before_install:
   - node --version
   - npm --version
 install:
-  - npm install
+  - yarn --pure-lockfile
 script:
-  - npm run lib
+  - npm run dist

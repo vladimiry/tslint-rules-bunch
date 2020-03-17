@@ -3,7 +3,7 @@ import spawnAsync, {SpawnResult} from "@expo/spawn-async";
 import test from "ava";
 
 const projectRootDirectory = path.resolve(process.cwd());
-const tslintRulesDirectory = path.join(projectRootDirectory, "./lib/rules");
+const tslintRulesDirectory = path.join(projectRootDirectory, "./dist/rules");
 
 test("test", async (t) => {
     const projectBasePath = path.resolve(__dirname, "./fixtures/project-1");
