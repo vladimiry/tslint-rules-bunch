@@ -1,9 +1,9 @@
 // tslint:disable:object-literal-sort-keys
 
-import * as path from "path";
 import * as Lint from "tslint";
-import * as ts from "typescript";
-import * as mm from "micromatch";
+import mm from "micromatch";
+import path from "path";
+import ts from "typescript";
 import {findImports, ImportKind} from "tsutils";
 
 const camelCasedRuleFileName = path.parse(__filename).name;
@@ -119,7 +119,7 @@ function walk(ctx: Lint.WalkContext<Options[]>) {
                     if (mm([relativeSrcFile], target).length && mm([relativeImportFile], from).length) {
                         const zone: OptionsZoneError = {basePath, target, from};
                         const messages = [
-                            `(${Rule.metadata.ruleName}): "${importUnit.text}" import is forbidden`,
+                            `"${importUnit.text}" import is forbidden`,
                         ];
 
                         if (verbose) {
