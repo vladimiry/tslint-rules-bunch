@@ -50,7 +50,7 @@
     "rimraf": "^3.0.2",
     "ts-node": "^8.6.2",
     "tslint": "^6.1.0",
-    "tslint-rules-bunch": "^0.0.8",
+    "tslint-rules-bunch": "^0.0.10",
     "typescript": "^3.8.3"
   },
   "dependencies": {
